@@ -22,7 +22,7 @@ require("./config/passport");
 var corsOptions = {
   origin: [
     "https://c33a-2603-7000-9800-498c-71a4-6ef7-dfa0-c82c.ngrok.io",
-    "http://localhost:3000",
+    "http://localhost:3005",
     "https://elastic-einstein-7f8f1c.netlify.app",
     "https://agitated-kepler-e28189.netlify.app",
   ],
@@ -71,7 +71,7 @@ function errorHandler(err, request, response, next) {
 require("dotenv").config();
 const PORT = process.env.PORT;
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3001);
 // app.listen(PORT, () => {
 //   console.log("Listening on Port:", PORT);
 // });
