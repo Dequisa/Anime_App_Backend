@@ -1,4 +1,6 @@
-\c anime_dev
+
+
+-- \c anime_dev
 
 
 INSERT INTO animes (title, description, image, YT_embedid, is_validated_seeded)
