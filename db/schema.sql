@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS  anime_dev;
+-- DROP DATABASE IF EXISTS  anime_dev;
 
-CREATE DATABASE anime_dev;
+-- CREATE DATABASE anime_dev;
 
-\c anime_dev;
+-- \c anime_dev;
 
 CREATE TABLE animes(
     anime_id SERIAL PRIMARY KEY,
