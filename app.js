@@ -33,7 +33,7 @@ app.use(cors(corsOptions));
 
 app.set("trust proxy", 1);
 // note: secret string should be stored securely in an enviorment variable note code
-const store = new session.MemoryStore();
+// const store = new session.MemoryStore();
 
 // app.use(
 //   session({
