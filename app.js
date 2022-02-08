@@ -35,16 +35,16 @@ app.set("trust proxy", 1);
 // note: secret string should be stored securely in an enviorment variable note code
 const store = new session.MemoryStore();
 
-app.use(
-  session({
-    secret: "D53gxl41G",
-    name: "anime_session",
-    resave: true,
-    saveUninitialized: false,
-    cookie: { secure: false, maxAge: 1000 * 60 * 60 * 24 },
-    store,
-  })
-);
+// app.use(
+//   session({
+//     secret: "D53gxl41G",
+//     name: "anime_session",
+//     resave: true,
+//     saveUninitialized: false,
+//     cookie: { secure: false, maxAge: 1000 * 60 * 60 * 24 },
+//     store,
+//   })
+// );
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
