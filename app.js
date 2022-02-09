@@ -50,6 +50,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(fileUpload());
 
+var connectionString =
+  "postgres://mqmtvikyfuoerw:a6b0d36e2618129111b1c52551b2bdc438020069aef940490b2b747ae08e450d@ec2-35-153-35-94.compute-1.amazonaws.com:5432/d5qk30i399c3d2";
+
+pg.connect(connectionString, function (err, client, done) {
+  client.query("SELECT * FROM your_table", function (err, result) {
+    done();
+    if (err) return console.error(err);
+    console.log(result.rows);
+  });
+});
+
 // Change path to /user
 app.use("/user", userController);
 app.use("/upload", fanArtController);
@@ -58,7 +69,6 @@ app.use("/characters", charactersController);
 app.use("/comments", commentsController);
 // app.use(errorHandler());
 app.get("/", (request, response) => {
-  // console.log("whats in req.session:", request.session);
   response.send("Anime Dojo");
 });
 
@@ -75,4 +85,5 @@ app.listen(process.env.PORT || 3001);
 // app.listen(PORT, () => {
 //   console.log("Listening on Port:", PORT);
 // });
+
 module.exports = app;
