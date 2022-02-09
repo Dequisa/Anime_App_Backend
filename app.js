@@ -3,7 +3,7 @@ const fileUpload = require("express-fileupload");
 const path = require("path");
 const app = express();
 const cors = require("cors");
-const session = require("express-session");
+// const session = require("express-session");
 const multer = require("multer");
 const fs = require("fs");
 const animesController = require("./controller/animes");
@@ -12,7 +12,7 @@ const fanArtController = require("./controller/fanArt");
 const userController = require("./controller/user");
 const commentsController = require("./controller/comments");
 const cookieParser = require("cookie-parser");
-const { Session } = require("inspector");
+// const { Session } = require("inspector");
 const { request, response } = require("express");
 require("./config/passport");
 
