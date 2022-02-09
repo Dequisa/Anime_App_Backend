@@ -14,7 +14,8 @@ require("dotenv").config();
 // };
 
 const cn = {
-  connectionString: process.env.DATABASE_URL,
+  connectionString:
+    "postgres://mqmtvikyfuoerw:a6b0d36e2618129111b1c52551b2bdc438020069aef940490b2b747ae08e450d@ec2-35-153-35-94.compute-1.amazonaws.com:5432/d5qk30i399c3d2",
   max: 30,
 };
 const db = pgp(cn);
