@@ -58,7 +58,7 @@ app.use("/characters", charactersController);
 app.use("/comments", commentsController);
 // app.use(errorHandler());
 app.get("/", (request, response) => {
-  console.log("whats in req.session:", request.session);
+  // console.log("whats in req.session:", request.session);
   response.send("Anime Dojo");
 });
 
